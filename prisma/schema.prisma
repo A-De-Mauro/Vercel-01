@@ -1,0 +1,54 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id      String   @id @default(cuid())
+  name    String?
+  profile Profile?
+
+  @@map(name: "users")
+}
+
+model Profile {
+  id                 String        @id @default(cuid())
+  user               User          @relation(fields: [userId], references: [id])
+  email              String
+  isSupport          Boolean       @default(false)
+  userId             String        @unique
+  clientChatHistory  ChatHistory[] @relation("ClientChatHistory")
+  supportChatHistory ChatHistory[] @relation("SupportChatHistory")
+  messages           Message[]
+}
+
+model ChatHistory {
+  id                  String    @id @default(cuid())
+  openedAtDate        String    @default("01/01/2022") @map(name: "opened_at_date")
+  closedAtDate        String?   @map(name: "closed_at_date")
+  isSolved            Boolean   @default(false)
+  customerUserProfile Profile?  @relation("ClientChatHistory", fields: [clientProfileId], references: [id])
+  supportUserProfile  Profile?  @relation("SupportChatHistory", fields: [supportProfileId], references: [id])
+  clientProfileId     String?
+  supportProfileId    String?
+  messages            Message[]
+}
+
+model Message {
+  id          String       @id @default(cuid())
+  content     String
+  sentAtTime  String       @default("00:00") @map(name: "sent_at_time")
+  chatHistory ChatHistory? @relation(fields: [historyId], references: [id])
+  historyId   String
+  userProfile Profile?     @relation(fields: [authorId], references: [id])
+  authorId    String?
+
+  @@map(name: "messages")
+}

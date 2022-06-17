@@ -6,6 +6,8 @@ import Link from 'next/link';
 
 const SITE_TITLE = 'Customer support'
 
+// TODO if the user doesn't have a profile, create an id
+
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
@@ -19,8 +21,8 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          <Link href="/customer-support/chat">
-            <a>Chat with the customer support</a>
+          <Link href="/users">
+            <a>Users</a>
           </Link>
         </h1>
 
