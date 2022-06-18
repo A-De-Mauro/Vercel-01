@@ -1,8 +1,8 @@
 import { GetStaticPaths } from 'next'
 import Link from 'next/link'
 
+import { getParams } from '../../components/utils'
 import { getAllProfileIds, getUserChatHistory } from '../../lib/user'
-import { getParams } from '../utils'
 
 interface Props {
   chatHistoryList: any[]
