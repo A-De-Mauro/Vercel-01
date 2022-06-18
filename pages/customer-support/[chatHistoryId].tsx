@@ -1,14 +1,14 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
 
+import { usePolling } from '../../components/__hooks__/usePolling'
 import Chat from '../../components/Chat'
 import ChatContainer from '../../components/ChatContainer'
+import { getParams } from '../../components/utils'
 import {
   getChatHistory,
   getAllHistoryIds,
   ChatHistory as ChatHistoryType,
 } from '../../lib/chatHistory'
-import { usePolling } from '../__hooks__/usePolling'
-import { getParams } from '../utils'
 
 interface Props {
   chatHistory: ChatHistoryType
