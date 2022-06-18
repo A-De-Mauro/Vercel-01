@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 body {
-  font-family: "PT Mono", Courier, monospace;
+  font-family: 'PT Mono', Courier, monospace;
   font-size: medium;
 }

@@ -1,8 +1,8 @@
-import prisma from "./prisma";
+import prisma from './prisma'
 
 export async function getAllProfileIds() {
-  const profiles = await prisma.profile.findMany();
-  return profiles.map(({ id }) => ({ id }));
+  const profiles = await prisma.profile.findMany()
+  return profiles.map(({ id }) => ({ id }))
 }
 
 export async function getAllSupportUsersId() {
@@ -11,8 +11,8 @@ export async function getAllSupportUsersId() {
       id: true,
     },
     where: { isSupport: true },
-  });
-  return usersId.map((id) => ({ params: { profileId: id } }));
+  })
+  return usersId.map((id) => ({ params: { profileId: id } }))
 }
 
 export async function getAllRegisteredUserId() {
@@ -21,8 +21,8 @@ export async function getAllRegisteredUserId() {
       id: true,
     },
     where: { isSupport: false },
-  });
-  return usersId.map((id) => ({ params: { profileId: id } }));
+  })
+  return usersId.map((id) => ({ params: { profileId: id } }))
 }
 
 export async function getUserChatHistory(userProfileId?: string) {
@@ -30,7 +30,7 @@ export async function getUserChatHistory(userProfileId?: string) {
     select: {
       id: true,
       openedAtDate: true,
-      closedAtDate: true, 
+      closedAtDate: true,
       isSolved: true,
     },
     where: {
@@ -39,6 +39,6 @@ export async function getUserChatHistory(userProfileId?: string) {
         { clientProfileId: userProfileId },
       ],
     },
-  });
-  return userChatHistory;
+  })
+  return userChatHistory
 }

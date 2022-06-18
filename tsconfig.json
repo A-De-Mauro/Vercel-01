@@ -15,6 +15,14 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/message/index.js", "pages/__hooks__/useInterval.js", "pages/api/chat-history/[id].js", "pages/api/translate/index.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/api/message/index.js",
+    "pages/__hooks__/useInterval.js",
+    "pages/api/chat-history/[id].js",
+    "pages/api/translate/index.js"
+  ],
   "exclude": ["node_modules"]
 }
