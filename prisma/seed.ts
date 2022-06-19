@@ -142,11 +142,6 @@ async function main() {
             sentAtTime: '00:00:00',
             authorId: 'p1',
           },
-          {
-            content: 'I have a big issue',
-            sentAtTime: '00:00:01',
-            authorId: 'p2',
-          },
         ],
       },
     },
