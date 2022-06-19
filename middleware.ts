@@ -9,8 +9,12 @@ export const config = {
 }
 
 export function middleware(request: NextRequest) {
-  const { nextUrl: url, geo } = request
-  const country = geo?.country || 'US'
+  const country = request.geo?.country || 'US'
+  const url = request.nextUrl
+
+  // middleware seems not to be working on Preview
+  // eslint-disable-next-line no-console
+  console.info(request.geo, request.ip)
 
   const countryLanguage = supportedLanguages.find(
     (language) => language.country === country

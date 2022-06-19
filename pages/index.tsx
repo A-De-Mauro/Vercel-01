@@ -11,6 +11,9 @@ const Home: NextPage = () => {
 
   if (typeof window !== 'undefined') {
     localStorage.setItem('language', (query.language as string) || 'en')
+    // Checking whether the query has params from the middleware
+    // eslint-disable-next-line no-console
+    console.log(query)
   }
 
   return (
