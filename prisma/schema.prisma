@@ -42,13 +42,15 @@ model ChatHistory {
 }
 
 model Message {
-  id          String       @id @default(cuid())
-  content     String
-  sentAtTime  String       @default("00:00") @map(name: "sent_at_time")
-  chatHistory ChatHistory? @relation(fields: [historyId], references: [id])
-  historyId   String
-  userProfile Profile?     @relation(fields: [authorId], references: [id])
-  authorId    String?
+  id               String       @id @default(cuid())
+  content          String
+  originalContent  String?
+  originalLanguage String?
+  sentAtTime       String       @default("00:00:00") @map(name: "sent_at_time")
+  chatHistory      ChatHistory? @relation(fields: [historyId], references: [id])
+  historyId        String
+  userProfile      Profile?     @relation(fields: [authorId], references: [id])
+  authorId         String?
 
   @@map(name: "messages")
 }

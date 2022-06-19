@@ -969,63 +969,67 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@next/env@12.1.6":
-  version "12.1.6"
-  resolved "https://registry.yarnpkg.com/@next/env/-/env-12.1.6.tgz#5f44823a78335355f00f1687cfc4f1dafa3eca08"
+"@next/env@12.1.7-canary.41":
+  version "12.1.7-canary.41"
+  resolved "https://registry.yarnpkg.com/@next/env/-/env-12.1.7-canary.41.tgz#8a24643278f5941b78b1886040554d98f06be0c4"
 
-"@next/eslint-plugin-next@12.1.6":
-  version "12.1.6"
-  resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-12.1.6.tgz#dde3f98831f15923b25244588d924c716956292e"
+"@next/eslint-plugin-next@12.1.7-canary.41":
+  version "12.1.7-canary.41"
+  resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-12.1.7-canary.41.tgz#ae01befd5e4c10a22a8b8f751791aee06e208c57"
   dependencies:
     glob "7.1.7"
 
-"@next/swc-android-arm-eabi@12.1.6":
-  version "12.1.6"
-  resolved "https://registry.yarnpkg.com/@next/swc-android-arm-eabi/-/swc-android-arm-eabi-12.1.6.tgz#79a35349b98f2f8c038ab6261aa9cd0d121c03f9"
+"@next/swc-android-arm-eabi@12.1.7-canary.41":
+  version "12.1.7-canary.41"
+  resolved "https://registry.yarnpkg.com/@next/swc-android-arm-eabi/-/swc-android-arm-eabi-12.1.7-canary.41.tgz#9d36144f5c57d7a6a902bc9012b748e2d0581306"
 
-"@next/swc-android-arm64@12.1.6":
-  version "12.1.6"
-  resolved "https://registry.yarnpkg.com/@next/swc-android-arm64/-/swc-android-arm64-12.1.6.tgz#ec08ea61794f8752c8ebcacbed0aafc5b9407456"
+"@next/swc-android-arm64@12.1.7-canary.41":
+  version "12.1.7-canary.41"
+  resolved "https://registry.yarnpkg.com/@next/swc-android-arm64/-/swc-android-arm64-12.1.7-canary.41.tgz#1121850e70ef2806014f369b9865372dedd46dbd"
 
-"@next/swc-darwin-arm64@12.1.6":
-  version "12.1.6"
-  resolved "https://registry.yarnpkg.com/@next/swc-darwin-arm64/-/swc-darwin-arm64-12.1.6.tgz#d1053805615fd0706e9b1667893a72271cd87119"
+"@next/swc-darwin-arm64@12.1.7-canary.41":
+  version "12.1.7-canary.41"
+  resolved "https://registry.yarnpkg.com/@next/swc-darwin-arm64/-/swc-darwin-arm64-12.1.7-canary.41.tgz#9dd8c4d478ff090823d652fb2731422e336a2826"
 
-"@next/swc-darwin-x64@12.1.6":
-  version "12.1.6"
-  resolved "https://registry.yarnpkg.com/@next/swc-darwin-x64/-/swc-darwin-x64-12.1.6.tgz#2d1b926a22f4c5230d5b311f9c56cfdcc406afec"
+"@next/swc-darwin-x64@12.1.7-canary.41":
+  version "12.1.7-canary.41"
+  resolved "https://registry.yarnpkg.com/@next/swc-darwin-x64/-/swc-darwin-x64-12.1.7-canary.41.tgz#4b7e029475c2989e331332d00f6974f06acb0847"
 
-"@next/swc-linux-arm-gnueabihf@12.1.6":
-  version "12.1.6"
-  resolved "https://registry.yarnpkg.com/@next/swc-linux-arm-gnueabihf/-/swc-linux-arm-gnueabihf-12.1.6.tgz#c021918d2a94a17f823106a5e069335b8a19724f"
+"@next/swc-freebsd-x64@12.1.7-canary.41":
+  version "12.1.7-canary.41"
+  resolved "https://registry.yarnpkg.com/@next/swc-freebsd-x64/-/swc-freebsd-x64-12.1.7-canary.41.tgz#1fe2455a8ce9ff57efa69a76ca510e1df8bf7f30"
 
-"@next/swc-linux-arm64-gnu@12.1.6":
-  version "12.1.6"
-  resolved "https://registry.yarnpkg.com/@next/swc-linux-arm64-gnu/-/swc-linux-arm64-gnu-12.1.6.tgz#ac55c07bfabde378dfa0ce2b8fc1c3b2897e81ae"
+"@next/swc-linux-arm-gnueabihf@12.1.7-canary.41":
+  version "12.1.7-canary.41"
+  resolved "https://registry.yarnpkg.com/@next/swc-linux-arm-gnueabihf/-/swc-linux-arm-gnueabihf-12.1.7-canary.41.tgz#63b00d20fa0aca370ce934fd98c6ecc9b054fac5"
 
-"@next/swc-linux-arm64-musl@12.1.6":
-  version "12.1.6"
-  resolved "https://registry.yarnpkg.com/@next/swc-linux-arm64-musl/-/swc-linux-arm64-musl-12.1.6.tgz#e429f826279894be9096be6bec13e75e3d6bd671"
+"@next/swc-linux-arm64-gnu@12.1.7-canary.41":
+  version "12.1.7-canary.41"
+  resolved "https://registry.yarnpkg.com/@next/swc-linux-arm64-gnu/-/swc-linux-arm64-gnu-12.1.7-canary.41.tgz#aca014c8341ff33d87bd596e0fc7fbadf02ce5a9"
 
-"@next/swc-linux-x64-gnu@12.1.6":
-  version "12.1.6"
-  resolved "https://registry.yarnpkg.com/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-12.1.6.tgz#1f276c0784a5ca599bfa34b2fcc0b38f3a738e08"
+"@next/swc-linux-arm64-musl@12.1.7-canary.41":
+  version "12.1.7-canary.41"
+  resolved "https://registry.yarnpkg.com/@next/swc-linux-arm64-musl/-/swc-linux-arm64-musl-12.1.7-canary.41.tgz#82f80f815ab3d308598d7f28f3785da0a43a2b3b"
 
-"@next/swc-linux-x64-musl@12.1.6":
-  version "12.1.6"
-  resolved "https://registry.yarnpkg.com/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-12.1.6.tgz#1d9933dd6ba303dcfd8a2acd6ac7c27ed41e2eea"
+"@next/swc-linux-x64-gnu@12.1.7-canary.41":
+  version "12.1.7-canary.41"
+  resolved "https://registry.yarnpkg.com/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-12.1.7-canary.41.tgz#bf46ccbd609def43d46a3612ec176919e0cb3852"
 
-"@next/swc-win32-arm64-msvc@12.1.6":
-  version "12.1.6"
-  resolved "https://registry.yarnpkg.com/@next/swc-win32-arm64-msvc/-/swc-win32-arm64-msvc-12.1.6.tgz#2ef9837f12ca652b1783d72ecb86208906042f02"
+"@next/swc-linux-x64-musl@12.1.7-canary.41":
+  version "12.1.7-canary.41"
+  resolved "https://registry.yarnpkg.com/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-12.1.7-canary.41.tgz#4a4342a314455c120b1c103ad4bde7099b1fcc93"
 
-"@next/swc-win32-ia32-msvc@12.1.6":
-  version "12.1.6"
-  resolved "https://registry.yarnpkg.com/@next/swc-win32-ia32-msvc/-/swc-win32-ia32-msvc-12.1.6.tgz#74003d0aa1c59dfa56cb15481a5c607cbc0027b9"
+"@next/swc-win32-arm64-msvc@12.1.7-canary.41":
+  version "12.1.7-canary.41"
+  resolved "https://registry.yarnpkg.com/@next/swc-win32-arm64-msvc/-/swc-win32-arm64-msvc-12.1.7-canary.41.tgz#1d76016ed1d9a911a86fef9bec34085729835ef0"
 
-"@next/swc-win32-x64-msvc@12.1.6":
-  version "12.1.6"
-  resolved "https://registry.yarnpkg.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-12.1.6.tgz#a350caf42975e7197b24b495b8d764eec7e6a36e"
+"@next/swc-win32-ia32-msvc@12.1.7-canary.41":
+  version "12.1.7-canary.41"
+  resolved "https://registry.yarnpkg.com/@next/swc-win32-ia32-msvc/-/swc-win32-ia32-msvc-12.1.7-canary.41.tgz#2b1d056b0442722bf89b9b9b6983609f9ea9a115"
+
+"@next/swc-win32-x64-msvc@12.1.7-canary.41":
+  version "12.1.7-canary.41"
+  resolved "https://registry.yarnpkg.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-12.1.7-canary.41.tgz#67dca62a8e391680ed100b35bd98de3ae3c782cc"
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -1062,6 +1066,12 @@
 "@rushstack/eslint-patch@^1.1.3":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.1.3.tgz#6801033be7ff87a6b7cadaf5b337c9f366a3c4b0"
+
+"@swc/helpers@0.3.17":
+  version "0.3.17"
+  resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.3.17.tgz#7c1b91f43c77e2bba99492162a498d465ef253d5"
+  dependencies:
+    tslib "^2.4.0"
 
 "@tsconfig/node10@^1.0.7":
   version "1.0.9"
@@ -1839,11 +1849,11 @@ eslint-config-airbnb@^19.0.4:
     object.assign "^4.1.2"
     object.entries "^1.1.5"
 
-eslint-config-next@12.1.6:
-  version "12.1.6"
-  resolved "https://registry.yarnpkg.com/eslint-config-next/-/eslint-config-next-12.1.6.tgz#55097028982dce49159d8753000be3916ac55254"
+eslint-config-next@^12.1.7-canary.41:
+  version "12.1.7-canary.41"
+  resolved "https://registry.yarnpkg.com/eslint-config-next/-/eslint-config-next-12.1.7-canary.41.tgz#c8e87649d68c4a992bc2ec9ecb504bbf637dafa9"
   dependencies:
-    "@next/eslint-plugin-next" "12.1.6"
+    "@next/eslint-plugin-next" "12.1.7-canary.41"
     "@rushstack/eslint-patch" "^1.1.3"
     "@typescript-eslint/parser" "^5.21.0"
     eslint-import-resolver-node "^0.3.6"
@@ -2777,27 +2787,30 @@ natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
 
-next@12.1.6:
-  version "12.1.6"
-  resolved "https://registry.yarnpkg.com/next/-/next-12.1.6.tgz#eb205e64af1998651f96f9df44556d47d8bbc533"
+next@^12.1.7-canary.41:
+  version "12.1.7-canary.41"
+  resolved "https://registry.yarnpkg.com/next/-/next-12.1.7-canary.41.tgz#21280e3c8dc2694194a5837a7e8db54042f656ad"
   dependencies:
-    "@next/env" "12.1.6"
+    "@next/env" "12.1.7-canary.41"
+    "@swc/helpers" "0.3.17"
     caniuse-lite "^1.0.30001332"
     postcss "8.4.5"
     styled-jsx "5.0.2"
+    use-sync-external-store "1.1.0"
   optionalDependencies:
-    "@next/swc-android-arm-eabi" "12.1.6"
-    "@next/swc-android-arm64" "12.1.6"
-    "@next/swc-darwin-arm64" "12.1.6"
-    "@next/swc-darwin-x64" "12.1.6"
-    "@next/swc-linux-arm-gnueabihf" "12.1.6"
-    "@next/swc-linux-arm64-gnu" "12.1.6"
-    "@next/swc-linux-arm64-musl" "12.1.6"
-    "@next/swc-linux-x64-gnu" "12.1.6"
-    "@next/swc-linux-x64-musl" "12.1.6"
-    "@next/swc-win32-arm64-msvc" "12.1.6"
-    "@next/swc-win32-ia32-msvc" "12.1.6"
-    "@next/swc-win32-x64-msvc" "12.1.6"
+    "@next/swc-android-arm-eabi" "12.1.7-canary.41"
+    "@next/swc-android-arm64" "12.1.7-canary.41"
+    "@next/swc-darwin-arm64" "12.1.7-canary.41"
+    "@next/swc-darwin-x64" "12.1.7-canary.41"
+    "@next/swc-freebsd-x64" "12.1.7-canary.41"
+    "@next/swc-linux-arm-gnueabihf" "12.1.7-canary.41"
+    "@next/swc-linux-arm64-gnu" "12.1.7-canary.41"
+    "@next/swc-linux-arm64-musl" "12.1.7-canary.41"
+    "@next/swc-linux-x64-gnu" "12.1.7-canary.41"
+    "@next/swc-linux-x64-musl" "12.1.7-canary.41"
+    "@next/swc-win32-arm64-msvc" "12.1.7-canary.41"
+    "@next/swc-win32-ia32-msvc" "12.1.7-canary.41"
+    "@next/swc-win32-x64-msvc" "12.1.7-canary.41"
 
 node-fetch@^2.6.0:
   version "2.6.7"
@@ -3640,7 +3653,7 @@ tslib@^1.8.1:
   version "1.14.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
 
-tslib@^2.1.0:
+tslib@^2.1.0, tslib@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
 
@@ -3721,6 +3734,10 @@ uri-js@^4.2.2:
   resolved "https://registry.yarnpkg.com/uri-js/-/uri-js-4.4.1.tgz#9b1a52595225859e55f669d928f88c6c57f2a77e"
   dependencies:
     punycode "^2.1.0"
+
+use-sync-external-store@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.1.0.tgz#3343c3fe7f7e404db70f8c687adf5c1652d34e82"
 
 util-deprecate@^1.0.1, util-deprecate@^1.0.2:
   version "1.0.2"

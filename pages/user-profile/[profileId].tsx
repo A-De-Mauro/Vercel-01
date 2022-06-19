@@ -10,7 +10,7 @@ interface Props {
 
 export const UserChatHistory = ({ chatHistoryList }: Props) => {
   if (!chatHistoryList) {
-    <div>Chat history not found</div>
+    return <div>Chat history not found</div>
   }
 
   return (
@@ -21,7 +21,7 @@ export const UserChatHistory = ({ chatHistoryList }: Props) => {
           {openedAtDate}
           Solved: {isSolved}
           {closedAtDate}
-          <Link href={`/customer-support/${id}`}>
+          <Link href={`/chat-history/${id}`}>
             <a>{`Chat history ${id}`}</a>
           </Link>
         </div>
