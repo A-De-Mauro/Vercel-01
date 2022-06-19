@@ -5,9 +5,10 @@ import LanguageSelect from './LanguageSelect'
 interface Props {
   authorId: string
   historyId: string
+  isSupport: boolean
 }
 
-export const Chat = ({ authorId, historyId }: Props) => {
+export const Chat = ({ authorId, historyId, isSupport }: Props) => {
   const defaultLanguage = localStorage.getItem('language') || 'en'
   const [currentLanguage, setCurrentLanguage] = useState(defaultLanguage)
 
@@ -24,7 +25,7 @@ export const Chat = ({ authorId, historyId }: Props) => {
   const submitData = async (e: React.SyntheticEvent) => {
     e.preventDefault()
     const time = new Date().toLocaleTimeString()
-    // Restores the message if an error occured
+    // Restores the message if an error occurred
     const sentMessage = message
     if (message.length) {
       setIsSending(true)
@@ -59,6 +60,7 @@ export const Chat = ({ authorId, historyId }: Props) => {
       <LanguageSelect
         currentLanguage={currentLanguage}
         setCurrentLanguage={handleSetLanguage}
+        isSupport={isSupport}
       />
       {isSending && <div className="animate-pulse">Sending...</div>}
       <form onSubmit={submitData} className="flex flex-1">

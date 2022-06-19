@@ -15,7 +15,7 @@ export async function getAllSupportUsersId() {
   return usersId.map((id) => ({ params: { profileId: id } }))
 }
 
-export async function getAllRegisteredUserId() {
+export async function getAllCustomerUsersId() {
   const usersId = await prisma.profile.findMany({
     select: {
       id: true,
@@ -32,6 +32,8 @@ export async function getUserChatHistory(userProfileId?: string) {
       openedAtDate: true,
       closedAtDate: true,
       isSolved: true,
+      clientProfileId: true,
+      supportProfileId: true,
     },
     where: {
       OR: [
