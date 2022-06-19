@@ -1,6 +1,6 @@
 import { Prisma } from '@prisma/client'
 
-import prisma from './prisma'
+import prisma from './utils/prisma'
 
 export async function getAllHistoryIds() {
   const historyIds = await prisma.chatHistory.findMany({

@@ -19,10 +19,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/api/message/index.js",
-    "components/__hooks__/useInterval.js",
-    "pages/api/chat-history/[id].js",
-    "pages/api/translate/index.js"
+    "components/__hooks__/useLocalStorage.js"
   ],
   "exclude": ["node_modules"]
 }

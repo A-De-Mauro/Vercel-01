@@ -10,10 +10,9 @@ interface Props {
 }
 
 export const Users = ({ profilesIds, currentWeather }: Props) => {
-  <Header currentWeather={currentWeather} />
-
   return (
     <>
+      <Header currentWeather={currentWeather} />
       {profilesIds.map(({ id }) => (
         <Link key={`${id}`} href={`/user-profile/${id}`}>
           <a>{`User ${id}`}</a>

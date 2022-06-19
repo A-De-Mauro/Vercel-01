@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-import prisma from '../../../lib/prisma'
+import prisma from '../../../lib/utils/prisma'
 
 // GET /api/chat-history
 // Required fields in query params: id

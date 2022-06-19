@@ -1,9 +1,10 @@
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
-// Creates 21 messages from 3 different chatHistories
+// Creates messages from 3 different chatHistories, one support user
 
 async function main() {
+  // Insert data safely
   const alice = await prisma.profile.upsert({
     where: { id: 'p1' },
     update: {},
@@ -100,25 +101,29 @@ async function main() {
         create: [
           {
             content: 'Hello! How can I help you?',
-            sentAtTime: '00.00',
+            sentAtTime: '00:00:00',
             authorId: 'p1',
           },
-          { content: 'I have an issue', sentAtTime: '00.01', authorId: 'p2' },
-          { content: 'Yes, tell me', sentAtTime: '00.02', authorId: 'p1' },
-          { content: 'Well', sentAtTime: '00.03', authorId: 'p2' },
+          {
+            content: 'I have an issue',
+            sentAtTime: '00:00:01',
+            authorId: 'p2',
+          },
+          { content: 'Yes, tell me', sentAtTime: '00:00:02', authorId: 'p1' },
+          { content: 'Well', sentAtTime: '00:00:03', authorId: 'p2' },
           {
             content: "This thing doesn't work",
-            sentAtTime: '00.04',
+            sentAtTime: '00:00:04',
             authorId: 'p2',
           },
           {
             content: 'Does it work now?',
-            sentAtTime: '00.05',
+            sentAtTime: '00:00:05',
             authorId: 'p1',
           },
           {
             content: 'Oh yes, thank you!!',
-            sentAtTime: '00.06',
+            sentAtTime: '00:00:06',
             authorId: 'p2',
           },
         ],
@@ -134,33 +139,33 @@ async function main() {
         create: [
           {
             content: 'Hello! How can I help you?',
-            sentAtTime: '00.00',
+            sentAtTime: '00:00:00',
             authorId: 'p1',
           },
           {
             content: 'I have a big issue',
-            sentAtTime: '00.01',
+            sentAtTime: '00:00:01',
             authorId: 'p2',
           },
           {
             content: 'Yes, tell me, I can help!',
-            sentAtTime: '00.02',
+            sentAtTime: '00:00:02',
             authorId: 'p1',
           },
-          { content: 'Well...', sentAtTime: '00.03', authorId: 'p2' },
+          { content: 'Well...', sentAtTime: '00:00:03', authorId: 'p2' },
           {
             content: "This thing doesn't work, I'm frustrated",
-            sentAtTime: '00.04',
+            sentAtTime: '00:00:04',
             authorId: 'p2',
           },
           {
             content: 'Sorry for that. Does it work now?',
-            sentAtTime: '00.05',
+            sentAtTime: '00:00:05',
             authorId: 'p1',
           },
           {
             content: "No, it still doesn't work...",
-            sentAtTime: '00.06',
+            sentAtTime: '00:00:06',
             authorId: 'p2',
           },
         ],
@@ -176,33 +181,33 @@ async function main() {
         create: [
           {
             content: 'Hello! How can I help you?',
-            sentAtTime: '00.00',
+            sentAtTime: '00:00:00',
             authorId: 'p1',
           },
           {
             content: 'I have something not working here',
-            sentAtTime: '00.01',
+            sentAtTime: '00:00:01',
             authorId: 'p3',
           },
           {
             content: 'Can you explain better, please?',
-            sentAtTime: '00.02',
+            sentAtTime: '00:00:02',
             authorId: 'p1',
           },
-          { content: 'Yes...', sentAtTime: '00.03', authorId: 'p3' },
+          { content: 'Yes...', sentAtTime: '00:00:03', authorId: 'p3' },
           {
             content: "The login doesn't work",
-            sentAtTime: '00.04',
+            sentAtTime: '00:00:04',
             authorId: 'p3',
           },
           {
             content: 'Okay, let me see. Does it work now?',
-            sentAtTime: '00.05',
+            sentAtTime: '00:00:05',
             authorId: 'p1',
           },
           {
             content: 'Oh yes, thank you!!',
-            sentAtTime: '00.06',
+            sentAtTime: '00:00:06',
             authorId: 'p3',
           },
         ],
@@ -210,7 +215,7 @@ async function main() {
     },
   })
 
-  console.log({
+  console.info({
     alice,
     andras,
     lucas,

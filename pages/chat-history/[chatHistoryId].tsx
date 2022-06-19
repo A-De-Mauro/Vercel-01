@@ -1,8 +1,7 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
 
 import { usePolling } from '../../components/__hooks__/usePolling'
-import Chat from '../../components/Chat'
-import ChatContainer from '../../components/ChatContainer'
+import Chat from '../../components/Chat/Chat'
 import { getParams } from '../../components/utils'
 import {
   getChatHistory,
@@ -16,25 +15,28 @@ interface Props {
 
 export default function ChatHistory({ chatHistory }: Props) {
   const { data, isLoading, isError, isValidating } = usePolling(
-    `/api/chat-history/${chatHistory?.id}`
+    `/api/chat-history/${chatHistory?.id}`,
+    // The polling will not set an interval if the chat has been closed
+    chatHistory?.isSolved
   )
 
   if (!chatHistory) return <>No history</>
   if (isError) return <>Error</>
   if (isLoading) return <>Loading...</>
 
-  const { clientProfileId, supportProfileId, id } = chatHistory
+  const { clientProfileId, supportProfileId, id, isSolved } = chatHistory
   const { messages } = data
 
   return (
-    <ChatContainer>
+    <div className="w-screen h-screen grid grid-cols-11 gap-0">
       <Chat
         messages={messages}
         viewingUserId={clientProfileId || supportProfileId || ''}
         historyId={id}
         isValidating={isValidating}
+        isSolved={isSolved}
       />
-    </ChatContainer>
+    </div>
   )
 }
 
