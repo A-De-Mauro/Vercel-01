@@ -38,20 +38,18 @@ export const ChatHistory = ({ chatHistory }: Props) => {
   const isSupport = clientProfileId === profileId ? false : true
 
   return (
-    <>
-      <h1>
-        Your chat, user {profileId} {isSupport ? '(support)' : '(customer)'}
+    <div className="w-screen h-screen grid grid-cols-11 gap-0">
+      <h1 className="col-span-12 md:col-span-3 lg:col-span-4">
+        Your {id} messages, user {profileId} {isSupport ? '(support)' : '(customer)'}
       </h1>
-      <div className="w-screen h-screen grid grid-cols-11 gap-0">
-        <Chat
-          messages={messages}
-          viewingUserId={profileId as string}
-          historyId={id}
-          isSolved={isSolved}
-          isSupport={isSupport}
-        />
-      </div>
-    </>
+      <Chat
+        messages={messages}
+        viewingUserId={profileId as string}
+        historyId={id}
+        isSolved={isSolved}
+        isSupport={isSupport}
+      />
+    </div>
   )
 }
 

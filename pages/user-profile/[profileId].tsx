@@ -22,7 +22,7 @@ export const UserChatHistory = ({ chatHistoryList, profileId }: Props) => {
       <div className="absolute right-1 top-3 w-10 h-10 mix-blend-hue">
         <Avatar />
       </div>
-      <h1 className="text-xl">Your chats (profile {profileId})</h1>
+      <h1 className="text-xl">Your chat history (profile {profileId})</h1>
       <div className="flex flex-col mt-5 border-slate-500 border-4">
         {chatHistoryList.map(
           ({
