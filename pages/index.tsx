@@ -7,13 +7,8 @@ import { supportedLanguages } from '../lib/utils/languages'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = ({ language, country }: any) => {
-  // const { query, isReady } = useRouter()
-
   if (typeof window !== 'undefined') {
     localStorage.setItem('language', (language as string) || 'en')
-    // Checking whether the query has params from the middleware
-    // eslint-disable-next-line no-console
-    console.log(language)
   }
 
   return (
