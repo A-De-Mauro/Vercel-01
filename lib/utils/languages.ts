@@ -6,7 +6,7 @@ export const supportedLanguages = [
   {
     code: 'ar',
     name: 'Arabic',
-    country: 'SA',
+    country: 'sa',
   },
   {
     code: 'az',
@@ -15,12 +15,12 @@ export const supportedLanguages = [
   {
     code: 'zh',
     name: 'Chinese',
-    country: 'CN',
+    country: 'cn',
   },
   {
     code: 'cs',
     name: 'Czech',
-    country: 'CZ',
+    country: 'cz',
   },
   {
     code: 'nl',
@@ -41,7 +41,7 @@ export const supportedLanguages = [
   {
     code: 'hi',
     name: 'Hindi',
-    country: 'IN',
+    country: 'in',
   },
   {
     code: 'hu',
@@ -54,7 +54,7 @@ export const supportedLanguages = [
   {
     code: 'ga',
     name: 'Irish',
-    country: 'IE',
+    country: 'ie',
   },
   {
     code: 'it',
@@ -63,12 +63,12 @@ export const supportedLanguages = [
   {
     code: 'ja',
     name: 'Japanese',
-    country: 'JP',
+    country: 'jp',
   },
   {
     code: 'ko',
     name: 'Korean',
-    country: 'KR',
+    country: 'kr',
   },
   {
     code: 'pl',
@@ -89,7 +89,7 @@ export const supportedLanguages = [
   {
     code: 'sv',
     name: 'Swedish',
-    country: 'SE',
+    country: 'se',
   },
   {
     code: 'tr',
@@ -98,11 +98,11 @@ export const supportedLanguages = [
   {
     code: 'uk',
     name: 'Ukranian',
-    country: 'UA',
+    country: 'ua',
   },
   {
     code: 'vi',
     name: 'Vietnamese',
-    country: 'VN',
+    country: 'vn',
   },
 ]
