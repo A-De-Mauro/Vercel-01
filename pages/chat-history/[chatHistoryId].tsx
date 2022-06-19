@@ -40,7 +40,8 @@ export const ChatHistory = ({ chatHistory }: Props) => {
   return (
     <div className="w-screen h-screen grid grid-cols-11 gap-0">
       <h1 className="col-span-12 md:col-span-3 lg:col-span-4">
-        Your {id} messages, user {profileId} {isSupport ? '(support)' : '(customer)'}
+        Your {id} messages, user {profileId}{' '}
+        {isSupport ? '(support)' : '(customer)'}
       </h1>
       <Chat
         messages={messages}
