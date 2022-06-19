@@ -9,15 +9,15 @@ export const config = {
 }
 
 export function middleware(request: NextRequest) {
-  const country = request.geo?.country || 'US'
+  const country = request.geo?.country?.toLocaleLowerCase() || 'unsupported'
   const url = request.nextUrl
 
-  // middleware seems not to be working on Preview
+  // middleware logs for Vercel
   // eslint-disable-next-line no-console
-  console.info(request.geo, request.ip)
+  console.info(request.geo)
 
   const countryLanguage = supportedLanguages.find(
-    (language) => language.country === country
+    (language) => language.country === country || language.code === country
   )
 
   url.searchParams.set('language', countryLanguage?.code || 'en')
