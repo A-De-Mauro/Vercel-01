@@ -1,6 +1,7 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
+import { useRouter } from 'next/router'
+import useSWR from 'swr'
 
-import { usePolling } from '../../components/__hooks__/usePolling'
 import Chat from '../../components/Chat/Chat'
 import { getParams } from '../../components/utils'
 import {
@@ -8,35 +9,49 @@ import {
   getAllHistoryIds,
   ChatHistory as ChatHistoryType,
 } from '../../lib/chatHistory'
+import { fetcher } from '../../lib/utils/fetcher'
 
 interface Props {
   chatHistory: ChatHistoryType
 }
 
-export default function ChatHistory({ chatHistory }: Props) {
-  const { data, isLoading, isError, isValidating } = usePolling(
+export const ChatHistory = ({ chatHistory }: Props) => {
+  const {
+    query: { profileId },
+  } = useRouter()
+
+  const { data, error } = useSWR(
     `/api/chat-history/${chatHistory?.id}`,
-    // The polling will not set an interval if the chat has been closed
-    chatHistory?.isSolved
+    fetcher,
+    {
+      // The polling will not set an interval if the chat has been closed
+      refreshInterval: chatHistory?.isSolved ? 0 : 1000,
+    }
   )
 
   if (!chatHistory) return <>No history</>
-  if (isError) return <>Error</>
-  if (isLoading) return <>Loading...</>
+  if (error) return <>Error</>
+  if (!data && !error) return <>Loading...</>
 
-  const { clientProfileId, supportProfileId, id, isSolved } = chatHistory
-  const { messages } = data
+  const { clientProfileId, id, isSolved } = chatHistory
+  const messages = data?.messages
+  const isSupport = clientProfileId === profileId ? false : true
 
   return (
-    <div className="w-screen h-screen grid grid-cols-11 gap-0">
-      <Chat
-        messages={messages}
-        viewingUserId={clientProfileId || supportProfileId || ''}
-        historyId={id}
-        isValidating={isValidating}
-        isSolved={isSolved}
-      />
-    </div>
+    <>
+      <h1>
+        Your chat, user {profileId} {isSupport ? '(support)' : '(customer)'}
+      </h1>
+      <div className="w-screen h-screen grid grid-cols-11 gap-0">
+        <Chat
+          messages={messages}
+          viewingUserId={profileId as string}
+          historyId={id}
+          isSolved={isSolved}
+          isSupport={isSupport}
+        />
+      </div>
+    </>
   )
 }
 
@@ -59,3 +74,5 @@ export const getStaticProps: GetStaticProps = async (context) => {
     },
   }
 }
+
+export default ChatHistory

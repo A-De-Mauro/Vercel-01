@@ -36,6 +36,7 @@ export const MessagesList = ({ messages, viewingUserId }: Props) => {
             <OtherUserMessage
               key={message.id}
               text={getMessageContent(message)}
+              language={language}
             />
           )
         }

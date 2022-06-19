@@ -147,27 +147,6 @@ async function main() {
             sentAtTime: '00:00:01',
             authorId: 'p2',
           },
-          {
-            content: 'Yes, tell me, I can help!',
-            sentAtTime: '00:00:02',
-            authorId: 'p1',
-          },
-          { content: 'Well...', sentAtTime: '00:00:03', authorId: 'p2' },
-          {
-            content: "This thing doesn't work, I'm frustrated",
-            sentAtTime: '00:00:04',
-            authorId: 'p2',
-          },
-          {
-            content: 'Sorry for that. Does it work now?',
-            sentAtTime: '00:00:05',
-            authorId: 'p1',
-          },
-          {
-            content: "No, it still doesn't work...",
-            sentAtTime: '00:00:06',
-            authorId: 'p2',
-          },
         ],
       },
     },

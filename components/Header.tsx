@@ -5,7 +5,7 @@ import { Avatar } from './Avatar'
 
 export const Header = (currentWeather: any) => {
   return (
-    <div className="grid col-span-7">
+    <div className="flex">
       <Head>
         <title>Chat with us!</title>
       </Head>

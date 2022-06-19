@@ -9,7 +9,7 @@ export const FetchingMessage = ({ isValidating = false }: Props) => {
         <span
           className={`${
             isValidating ? 'animate-pulse' : 'animate-ping'
-          } relative inline-flex rounded-full h-2 w-2 bg-green-700`}
+          } relative inline-flex rounded-full h-2 w-2 bg-slate-900`}
         ></span>
       </span>
       The chat is open and regularly fetching for updates

@@ -3,11 +3,13 @@ import { supportedLanguages } from '../../lib/utils/languages'
 interface Props {
   setCurrentLanguage(language: string): void
   currentLanguage: string
+  isSupport: boolean
 }
 
 export const LanguageSelect = ({
   currentLanguage,
   setCurrentLanguage,
+  isSupport,
 }: Props) => {
   return (
     <div className="flex w-full items-center justify-between mx-2 my-2">
@@ -31,9 +33,11 @@ export const LanguageSelect = ({
           </select>
         </form>
       </div>
-      <button className="px-3 bg-slate-900 text-white hover:bg-slate-500 cursor-pointer transition-colors duration-300">
-        Close chat
-      </button>
+      {isSupport && (
+        <button className="px-3 bg-slate-900 text-white hover:bg-slate-500 cursor-pointer transition-colors duration-300">
+          Close chat
+        </button>
+      )}
     </div>
   )
 }
